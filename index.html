@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PDF to Image</title>
+  <meta name="description" content="Convert your PDFs in to images">
+  <meta name="author" content="Sully">
+  <link rel="stylesheet" href="source/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous"></script>
+  <script src="source/jszip.min.js"></script>
+</head>
+
+<body>
+
+<input type="file" id="file" accept="application/pdf">
+<br><br>
+
+
+<label>format</label><br>
+<select id="format" class = "format">
+  <option value="image/png">PNG</option>
+  <option value="image/jpeg">JPG</option>
+  <option value="image/webp">webp</option>
+</select>
+
+<br>
+
+<div class = "scale">
+<label>scale</label><br>
+<input type="number" min="1" max="6" id="scale" value="2" class="put">
+</div>
+<br>
+
+<br>
+<input type="button" value="convert" id="go" class="convert">
+<br>
+
+<div id="info"></div>
+<canvas id="canvas" style="width: 100%;"></canvas>
+
+<script src="source/script.js"></script>
+</body>
+
+</html>
